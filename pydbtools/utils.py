@@ -65,7 +65,7 @@ aws_role_regex_rules = [
     ),
     (
         r"^airflow-",  # Analytical Platform Airflow
-        None
+        None,
     ),
 ]
 
@@ -248,6 +248,9 @@ def get_database_name_from_sql(sql: str) -> str:
     Returns:
         str: The database table name
     """
+
+    if not sql or not sql.strip():
+        return None
 
     for table in sql_metadata.Parser(sql).tables:
         # Return the first database seen in the

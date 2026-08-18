@@ -5,7 +5,7 @@ WITH a AS
 
 b AS (
     SELECT c1, c2 FROM (SELECT * FROM db.two)
-), 
+),
 /* Comment that breaks parser */
 
 c AS (
