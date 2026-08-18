@@ -37,3 +37,6 @@ docs = [
 [build-system]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
+
+[tool.ruff]
+extend-exclude = ["*.ipynb"]
