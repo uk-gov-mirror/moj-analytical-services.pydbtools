@@ -9,5 +9,3 @@ permissions:
 jobs:
   python-unit-test:
     uses: ministryofjustice/data-engineering-github-actions/.github/workflows/reusable-python-unit-test.yml@main
-    with:
-      uv_test_group_name: test
