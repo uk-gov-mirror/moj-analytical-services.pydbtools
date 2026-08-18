@@ -1,5 +1,6 @@
-import pytest
 import os
+
+import pytest
 
 
 # Get all SQL files in a dict

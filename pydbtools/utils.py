@@ -65,7 +65,7 @@ aws_role_regex_rules = [
     ),
     (
         r"^airflow-",  # Analytical Platform Airflow
-        None
+        None,
     ),
 ]
 

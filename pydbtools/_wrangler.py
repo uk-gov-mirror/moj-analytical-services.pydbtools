@@ -1,31 +1,31 @@
+import functools
+import inspect
+import logging
+import os
+import pprint
+import re
+import time
+import warnings
+from typing import Iterator, List, Optional
+
 import awswrangler as wr
 import awswrangler.athena as ath
-import os
-import sqlparse
-import warnings
-import logging
-import pprint
 import pandas as pd
-import re
-from typing import Iterator, Optional, List
-import time
-import inspect
-import functools
+import sqlparse
 from arrow_pd_parser import reader
 
 from pydbtools.utils import (
-    get_user_id_and_table_dir,
-    get_database_name_from_userid,
-    get_database_name_from_sql,
-    clean_query,
-    get_default_args,
-    get_boto_session,
-    replace_temp_database_name_reference,
     _set_region_name,
-    s3_path_join,
+    clean_query,
+    get_boto_session,
+    get_database_name_from_sql,
+    get_database_name_from_userid,
+    get_default_args,
     get_table_location,
+    get_user_id_and_table_dir,
+    replace_temp_database_name_reference,
+    s3_path_join,
 )
-
 
 logger = logging.getLogger(__name__)
 
